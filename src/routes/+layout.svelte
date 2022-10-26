@@ -9,8 +9,8 @@
 				<img alt="tesla_paneli_logo.png" src="vizitka.jpg" width="250px" height="150px" />
 			</div>
 			<div class="navbar-end space-x-2">
-				<a href="/" class="btn btn-outline">Prodaja</a>
-				<a href="/tesla" class="btn btn-primary btn-outline">Tesla paneli</a>
+				<a href="./" class="btn btn-outline">Prodaja</a>
+				<a href="./tesla" class="btn btn-primary btn-outline">Tesla paneli</a>
 			</div>
 		</div>
 	</div>

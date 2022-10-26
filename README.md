@@ -36,3 +36,14 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+
+My:
+https://www.npmjs.com/package/@sveltejs/adapter-static
+
+https://tailwindcss.com/docs/guides/sveltekit
+
+https://dev.to/brewhousedigital/adding-tailwind-and-daisy-ui-to-sveltekit-2hk5
+
+
+

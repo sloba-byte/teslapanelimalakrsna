@@ -40,7 +40,3 @@
 <p class="mt-2 flex w-full text-2xl tracking-tight text-base-content">
 	Dodjite kod nas i uverite se u našu sjajnu uslugu, vrhunski kvalitet i najbolje cene!
 </p>
-
-<p class="mt-2 flex w-full text-2xl tracking-tight text-base-content">
-	Dodjite kod nas i uverite se u našu sjajnu uslugu, vrhunski kvalitet i najbolje cene!
-</p>

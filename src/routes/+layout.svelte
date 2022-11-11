@@ -17,10 +17,23 @@
 				</a>
 			</div>
 			<div class="navbar-end space-x-2">
-				<a href="./paneli" class="btn btn-outline">Cene Panela</a>
-				<a href="./kontakt" class="btn btn-outline">Kontakt</a>
-				<a href="./prica" class="btn btn-outline">O nama</a>
+				<div class="dropdown dropdown-end">
+					<!-- svelte-ignore a11y-label-has-associated-control -->
+					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+					<label tabindex="0" class="btn btn-outline">Paneli Cene</label>
+					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+					<ul
+						tabindex="0"
+						class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+					>
+						<li><a href="./tfh">TFH</a></li>
+						<li><a href="./tfv">TFV</a></li>
+						<li><a href="./tk5">TK5</a></li>
+					</ul>
+				</div>
 				<a href="./tesla" class="btn btn-outline">Tesla paneli</a>
+				<a href="./prica" class="btn btn-outline">O nama</a>
+				<a href="./kontakt" class="btn btn-outline">Kontakt</a>
 			</div>
 		</div>
 	</div>

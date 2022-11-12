@@ -1,9 +1,7 @@
 <script lang="ts">
-	const res = fetch(
-		'https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/TFV?key=AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o'
-	);
+	import type { PageData } from './$types';
 
-	console.log(res);
+	export let data: PageData;
 </script>
 
 <div class="flex">
@@ -18,7 +16,9 @@
 	<img class="w-3/5" alt="TFV" src="tfv_panel.png" width="500px" />
 </div>
 
-<h2 class="flex mt-4 font-medium text-3xl">Nasa ponuda panela sa cenama:</h2>
+<h2 class="flex mt-4 tracking-tight text-base-content font-medium text-3xl">
+	Nasa ponuda panela sa cenama:
+</h2>
 
 <div class="flex flex-col">
 	<div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -27,58 +27,34 @@
 				<table class="min-w-full">
 					<thead class="bg-white border-b">
 						<tr>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Oznaka
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Debljina(mm)
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Dužina(mm)
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Širina(mm)
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Cena bez PDV
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Cena sa PDV
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Boja
-							</th>
-							<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
-								Opis
-							</th>
+							{#each data.header as h}
+								<th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4 text-left">
+									{h}
+								</th>
+							{/each}
 						</tr>
 					</thead>
 					<tbody>
-						<tr class="bg-gray-100 border-b">
-							<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Mark </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Mark </td>
-
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> @mdo </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-						</tr>
-						<tr class="bg-white border-b">
-							<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">1</td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Mark </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Mark </td>
-
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> @mdo </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-							<td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap"> Otto </td>
-						</tr>
+						{#each data.values as values, i}
+							<tr class="{i % 2 == 0 ? 'bg-gray-100' : 'bg-white'} border-b">
+								{#each values as v}
+									<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{v}</td>
+								{/each}
+							</tr>
+						{/each}
 					</tbody>
 				</table>
 			</div>
 		</div>
 	</div>
 </div>
+
+<p class="mt-3 tracking-tight text-base-content text-xl">
+	Više o ovom tipu panela pročitaj na sajtu proizvodjača:
+	<a
+		rel="noreferrer"
+		target="_blank"
+		href="https://www.teslapanels.rs/paneli/tesla-tvf/"
+		class="btn btn-active btn-primary">Tesla TFV panel</a
+	>
+</p>

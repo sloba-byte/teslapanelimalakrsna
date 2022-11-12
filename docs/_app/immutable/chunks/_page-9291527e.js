@@ -1,1 +1,0 @@
-const o=async({fetch:a,params:s})=>{const e=await a("https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/TFV?key=AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o");return console.log(e),await e.json()},t=Object.freeze(Object.defineProperty({__proto__:null,load:o},Symbol.toStringTag,{value:"Module"}));export{t as _,o as l};

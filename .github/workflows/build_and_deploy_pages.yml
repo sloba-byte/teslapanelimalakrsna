@@ -30,14 +30,23 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
-          curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}"
+          curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > modifiedTime.txt
+          
+      - name: Cache dependencies
+        id: cacheModified
+        uses: actions/cache@v3.0.11
+        with:
+          path: ./modifiedTime.txt
+          key: modifiedTime-${{ hashFiles('modifiedTime.txt') }}
 
       - name: Setup Node.js
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         uses: actions/setup-node@v3.5.1
         with:
           node-version: '18'
 
       - name: Cache dependencies
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         id: cache
         uses: actions/cache@v3.0.11
         with:
@@ -45,19 +54,23 @@ jobs:
           key: modules-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
+        if: steps.cacheModified.outputs.cache-hit != 'true' && steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
 
       - name: Create build
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         run: npm run build
         
-      - name: Setup Pages
+      - name: Setup Page
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         uses: actions/configure-pages@v2
       - name: Upload artifact
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
           path: './build/'
       - name: Deploy to GitHub Pages
+        if: steps.cacheModified.outputs.cache-hit != 'true'
         id: deployment
         uses: actions/deploy-pages@v1

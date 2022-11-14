@@ -30,23 +30,32 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
-          curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > modifiedTime.txt
-          
+          curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > gSheetChangeInfo.json
+      - id: set_var
+        run: |
+          content=`cat ./modifiedTime.json`
+          # the following lines are only required for multi line json
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          # end of optional handling for multi line json
+          echo "::set-output name=gSheetChangeInfoJson::$content"
+ 
       - name: Cache dependencies
         id: cacheModified
         uses: actions/cache@v3.0.11
         with:
-          path: ./modifiedTime.txt
-          key: modifiedTime-${{ hashFiles('modifiedTime.txt') }}
+          path: ./modifiedTime.json
+          key: gSheetLastModified_${{ fromJson(steps.set_var.outputs.gSheetChangeInfoJson).modifiedTime }}
 
       - name: Setup Node.js
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         uses: actions/setup-node@v3.5.1
         with:
           node-version: '18'
 
       - name: Cache dependencies
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         id: cache
         uses: actions/cache@v3.0.11
         with:
@@ -54,23 +63,23 @@ jobs:
           key: modules-${{ hashFiles('package-lock.json') }}
 
       - name: Install dependencies
-        if: steps.cacheModified.outputs.cache-hit == 'true' && steps.cache.outputs.cache-hit != 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false' && steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
 
       - name: Create build
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         run: npm run build
         
       - name: Setup Page
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         uses: actions/configure-pages@v2
       - name: Upload artifact
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
           path: './build/'
       - name: Deploy to GitHub Pages
-        if: steps.cacheModified.outputs.cache-hit == 'true'
+        if: steps.cacheModified.outputs.cache-hit == 'false'
         id: deployment
         uses: actions/deploy-pages@v1

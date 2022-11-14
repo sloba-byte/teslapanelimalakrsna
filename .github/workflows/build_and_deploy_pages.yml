@@ -39,7 +39,9 @@ jobs:
           content="${content//$'\n'/'%0A'}"
           content="${content//$'\r'/'%0D'}"
           # end of optional handling for multi line json
-          echo "::set-output name=gSheetChangeInfoJson::$content"
+          echo "{gSheetChangeInfoJson}={$content}" >> $GITHUB_OUTPUT
+      - run: |
+          echo ${{ steps.set_var.outputs.gSheetChangeInfoJson }}
  
       - name: Cache dependencies
         id: cacheModified

@@ -30,7 +30,7 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
-           curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY} > modified.json
+           curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > modified.json
            touch empty.json
       - id: set_var
         run: |

@@ -30,10 +30,10 @@ jobs:
           API_KEY: ${{ secrets.API_KEY }}
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
-          curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > gSheetChangeInfo.json
+           touch empty.json
       - id: set_var
         run: |
-          content=`cat ./modifiedTime.json`
+          content=`curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}"`
           # the following lines are only required for multi line json
           content="${content//'%'/'%25'}"
           content="${content//$'\n'/'%0A'}"
@@ -45,8 +45,8 @@ jobs:
         id: cacheModified
         uses: actions/cache@v3.0.11
         with:
-          path: ./modifiedTime.json
-          key: gSheetLastModified_${{ fromJson(steps.set_var.outputs.gSheetChangeInfoJson).modifiedTime }}
+          path: ./empty.json
+          key: gSheetLastChanged_${{ fromJson(steps.set_var.outputs.gSheetChangeInfoJson).modifiedTime }}
 
       - name: Setup Node.js
         if: steps.cacheModified.outputs.cache-hit == 'false'

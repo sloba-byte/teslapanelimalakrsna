@@ -31,7 +31,6 @@ jobs:
           SHEET_ID: ${{ secrets.SHEET_ID }}
         run: |
            curl "https://www.googleapis.com/drive/v3/files/${SHEET_ID}?fields=modifiedTime&key=${API_KEY}" > modified.json
-           touch empty.json
       - id: set_var
         run: |
           content=`cat ./modified.json`
@@ -43,12 +42,13 @@ jobs:
           echo "{gSheetChangeInfoJson}={$content}" >> $GITHUB_OUTPUT
       - run: |
           echo ${{ steps.set_var.outputs.gSheetChangeInfoJson }}
+          cat ./modified.json
  
       - name: Cache dependencies
         id: cacheModified
         uses: actions/cache@v3.0.11
         with:
-          path: ./empty.json
+          path: ./modified.json
           key: gSheetLastChanged_${{ fromJson(steps.set_var.outputs.gSheetChangeInfoJson).modifiedTime }}
 
       - name: Setup Node.js

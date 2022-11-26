@@ -37,29 +37,50 @@
 					<ul
 						class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 					>
-						<li><a href="{base}/tesla">Tesla paneli</a></li>
+						<li>Zidni Paneli:</li>
+						<ul class="px-2">
+							<li><a href="{base}/zidni-paneli/tfh">TFH</a></li>
+							<li><a href="{base}/zidni-paneli/tfv">TFV</a></li>
+						</ul>
+						<li>Krovni Paneli:</li>
+						<ul class="px-2">
+							<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
+						</ul>
+
+						<li><a href="{base}/tesla">Proizvodnja</a></li>
 						<li><a href="{base}/prica">O nama</a></li>
 						<li><a href="{base}/kontakt">Kontakt</a></li>
 					</ul>
 				</div>
-				<a href="{base}/" class="lg:hidden">Auto Šop</a>
+				<a href="{base}/" class="lg:hidden font-semibold">Auto Šop Sendvič Paneli</a>
 			</div>
 			<div class="navbar-end space-x-2 hidden lg:flex">
 				<div class="dropdown dropdown-end">
 					<!-- svelte-ignore a11y-label-has-associated-control -->
 					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-					<label tabindex="0" class="btn btn-outline">Paneli Cene</label>
+					<label tabindex="0" class="btn btn-outline">Zidni paneli</label>
 					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 					<ul
 						tabindex="0"
 						class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
 					>
-						<li><a href="{base}/tfh">TFH</a></li>
-						<li><a href="{base}/tfv">TFV</a></li>
-						<li><a href="{base}/tk5">TK5</a></li>
+						<li><a href="{base}/zidni-paneli/tfh">TFH</a></li>
+						<li><a href="{base}/zidni-paneli/tfv">TFV</a></li>
 					</ul>
 				</div>
-				<a href="{base}/tesla" class="btn btn-outline">Tesla paneli</a>
+				<div class="dropdown dropdown-end">
+					<!-- svelte-ignore a11y-label-has-associated-control -->
+					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+					<label tabindex="0" class="btn btn-outline">Krovni paneli</label>
+					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+					<ul
+						tabindex="0"
+						class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
+					>
+						<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
+					</ul>
+				</div>
+				<a href="{base}/tesla" class="btn btn-outline">Proizvodnja</a>
 				<a href="{base}/prica" class="btn btn-outline">O nama</a>
 				<a href="{base}/kontakt" class="btn btn-outline">Kontakt</a>
 			</div>

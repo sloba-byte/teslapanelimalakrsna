@@ -37,6 +37,10 @@ jobs:
           path: ./node_modules
           key: modules-${{ hashFiles('package-lock.json') }}
 
+      - name: Create .env file
+        shell: bash
+        run: echo PUBLIC_SITE_URL=\"https://sloba-byte.github.io/teslapanelimalakrsna/\" > .env
+
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts

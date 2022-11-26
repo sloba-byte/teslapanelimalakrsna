@@ -1,5 +1,6 @@
 <script lang="ts">
 	let ids = ['2', '3', '4', '5', '6', '7'];
+	import { base } from '$app/paths';
 </script>
 
 <h1 class="mt-2 text-center text-2xl font-medium tracking-tight text-base-content">
@@ -13,7 +14,7 @@
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
 	{#each ids as id}
 		<li class="shrink-0">
-			<img alt="Main image - {id}" src="main-{id}.jpg" width="500px" />
+			<img alt="Main image - {id}" src="{base}/main-{id}.jpg" width="500px" />
 		</li>
 	{/each}
 </ul>

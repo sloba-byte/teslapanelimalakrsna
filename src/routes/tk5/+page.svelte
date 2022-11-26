@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { base } from '$app/paths';
 
 	export let data: PageData;
 </script>
@@ -17,7 +18,7 @@
 			unutrašnjoj strani čime je postignuta visoka nosivost panela.
 		</p>
 	</div>
-	<img class="w-3/5" alt="TK5" src="tk5_panel.png" width="500px" />
+	<img class="w-3/5" alt="TK5" src="{base}/tk5_panel.png" width="500px" />
 </div>
 
 <h2 class="flex mt-4 font-medium text-3xl">Nasa ponuda panela sa cenama:</h2>

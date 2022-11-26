@@ -1,9 +1,13 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <h1 class=" text-xl tracking-tight text-base-content text-center">
 	Mi se nalazimo na Požarevačkom putu, posetite nas:
 </h1>
 <div class="mt-2 text-left tracking-tight text-base-content">
 	<a rel="noreferrer" target="_blank" href="https://goo.gl/maps/TgrMjtdUaP6hFB859">
-		<img alt="Nasa lokacija" src="lokacija.png" style="border: 1px solid black" />
+		<img alt="Nasa lokacija" src="{base}/lokacija.png" style="border: 1px solid black" />
 	</a>
 	<p class="text-xs tracking-tight text-base-content">
 		Klikom na mapu dobicete precizno našu lokaciju!

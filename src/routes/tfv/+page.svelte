@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
+	import { base } from '$app/paths';
 
 	export let data: PageData;
 </script>
@@ -13,7 +14,7 @@
 			(PIR).
 		</p>
 	</div>
-	<img class="w-3/5" alt="TFV" src="tfv_panel.png" width="500px" />
+	<img class="w-3/5" alt="TFV" src="{base}/tfv_panel.png" width="500px" />
 </div>
 
 <h2 class="flex mt-4 tracking-tight text-base-content font-medium text-3xl">

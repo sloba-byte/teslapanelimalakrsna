@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { base } from '$app/paths';
+</script>
+
 <h1 class="mt-2 text-center text-2xl font font-medium text-base-content">Fabrika i proizvodnja</h1>
 
 <p class="mt-1 tracking-tight text-base-content">
@@ -12,10 +16,10 @@
 
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
 	<li class="shrink-0">
-		<img alt="Fabrika" src="slika-fabrika.jpg" width="500px" />
+		<img alt="Fabrika" src="{base}/slika-fabrika.jpg" width="500px" />
 	</li>
 	<li class="shrink-0">
-		<img alt="Postrojenje" src="slika-postrojenje.jpg" width="500px" />
+		<img alt="Postrojenje" src="{base}/slika-postrojenje.jpg" width="500px" />
 	</li>
 </ul>
 

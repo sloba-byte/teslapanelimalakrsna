@@ -37,17 +37,17 @@
 					<ul
 						class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
 					>
-						<li>Zidni Paneli:</li>
-						<ul class="px-2">
+						<li><a href="{base}/zidni-paneli">Zidni Paneli</a></li>
+						<ul class="px-3">
 							<li><a href="{base}/zidni-paneli/tfh">TFH</a></li>
 							<li><a href="{base}/zidni-paneli/tfv">TFV</a></li>
 						</ul>
-						<li>Krovni Paneli:</li>
-						<ul class="px-2">
+						<li><a href="{base}/krovni-paneli">Krovni Paneli</a></li>
+						<ul class="px-3">
 							<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
 						</ul>
 
-						<li><a href="{base}/tesla">Proizvodnja</a></li>
+						<li><a href="{base}/tesla">Proizvodnja Tesla</a></li>
 						<li><a href="{base}/prica">O nama</a></li>
 						<li><a href="{base}/kontakt">Kontakt</a></li>
 					</ul>
@@ -64,6 +64,7 @@
 						tabindex="0"
 						class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
 					>
+						<li><a href="{base}/zidni-paneli">Informacije</a></li>
 						<li><a href="{base}/zidni-paneli/tfh">TFH</a></li>
 						<li><a href="{base}/zidni-paneli/tfv">TFV</a></li>
 					</ul>
@@ -77,6 +78,7 @@
 						tabindex="0"
 						class="menu dropdown-content p-2 shadow bg-base-100 rounded-box w-52 mt-4"
 					>
+						<li><a href="{base}/krovni-paneli">Informacije</a></li>
 						<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
 					</ul>
 				</div>

@@ -49,10 +49,11 @@
 
 		<textarea
 			type="text"
+			maxlength="256"
 			placeholder=""
 			name="message"
-			rows="20"
-			class="input input-primary input-bordered w-full max-w-xs "
+			rows="5"
+			class="textarea input-primary input-bordered w-full max-w-xs "
 			required
 		/>
 	</div>

@@ -46,7 +46,7 @@
 						<ul class="px-3">
 							<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
 						</ul>
-
+						<li><a href="{base}/paneli-cene">Paneli cene</a></li>
 						<li><a href="{base}/tesla">Proizvodnja Tesla</a></li>
 						<li><a href="{base}/prica">O nama</a></li>
 						<li><a href="{base}/kontakt">Kontakt</a></li>
@@ -82,6 +82,7 @@
 						<li><a href="{base}/krovni-paneli/tk5">TK5</a></li>
 					</ul>
 				</div>
+				<a href="{base}/paneli-cene" class="btn btn-outline">Paneli cene</a>
 				<a href="{base}/tesla" class="btn btn-outline">Proizvodnja</a>
 				<a href="{base}/prica" class="btn btn-outline">O nama</a>
 				<a href="{base}/kontakt" class="btn btn-outline">Kontakt</a>

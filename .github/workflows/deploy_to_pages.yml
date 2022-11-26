@@ -40,6 +40,10 @@ jobs:
       - name: Install dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: npm ci --ignore-scripts
+        
+      - name: Create .env file
+        shell: bash
+        run: echo PUBLIC_SITE_URL=\"https://sloba-byte.github.io/teslapanelimalakrsna/\" > .env
 
       - name: Create build
         run: npm run build

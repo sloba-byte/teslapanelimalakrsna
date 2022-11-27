@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 </script>
 
 <h1 class="text-2xl tracking-tight text-base-content text-center">
@@ -26,5 +26,5 @@
 	title="O Auto Šopu, Mala Krsna"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Tesla panels - Auto Šop se dugi niz godina bavi uslužnom delatnosću. Pružamo vam kvalitet i brzu uslugu. Kontaktirajte nas za više informacija."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/prica"
 />

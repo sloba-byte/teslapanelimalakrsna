@@ -3,7 +3,7 @@
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 
 	export let data: PanelPrice;
 </script>
@@ -43,5 +43,5 @@
 	title="Krovni panel TK5, panel za krov"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Krovni termoizolacioni panel greje vaš dom i pritom smanjuje mesečne troškove. Veoma kvalitetni i praktični za postavljanje. Pozovite nas za više informacija."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/krovni-paneli/tk5"
 />

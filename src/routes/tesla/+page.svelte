@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 </script>
 
 <h1 class="mt-2 text-center text-2xl font font-medium text-base-content">Fabrika i proizvodnja</h1>
@@ -119,5 +119,5 @@
 	title="Tesla panel, Tesla paneli"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Uz Tesla panele mesečni računi su niži! Njima možete grejati svoj dom i smanjiti upotrebu električne energije. Investicija koja se isplati. Posetite naš sajt."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/tesla"
 />

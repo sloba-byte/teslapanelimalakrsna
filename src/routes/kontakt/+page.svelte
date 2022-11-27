@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 </script>
 
 <h1 class=" text-xl tracking-tight text-base-content text-center">
@@ -70,5 +70,5 @@
 	title="Kontakt telefon i mejl"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Ako vas zanimaju naši sendvič paneli, budite slobodni da nas kontaktirate. Takođe smo tu za vas i da vam pružimo odgovore na sva vaša pitanja."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/kontakt"
 />

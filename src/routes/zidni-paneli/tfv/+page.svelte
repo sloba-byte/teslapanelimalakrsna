@@ -3,7 +3,7 @@
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 
 	export let data: PanelPrice;
 </script>
@@ -41,5 +41,5 @@
 	title="Zidni panel TFV brenda Tesla"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Zidni panel sa vidljivim zavrtnjem ispunjen poliuretanom i samogasivim poliuretanom. Vrlo kvalitetni i praktični zidni paneli za vaš dom. Kontaktiraje nas."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/zidni-paneli/tfv"
 />

@@ -3,7 +3,7 @@
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 
 	export let data: PanelPrice;
 </script>
@@ -43,5 +43,5 @@
 	title="Zidni panel TFH brenda Tesla"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Zidni panel sa skrivenim zavrtnjem i ispunjen poliuretanskom vunom. Veoma kvalitetan panel koji zadovoljava najstrožije estetske zahvate. Posetite naš sajt."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/zidni-paneli/tfh"
 />

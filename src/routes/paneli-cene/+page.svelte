@@ -2,7 +2,7 @@
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
 	import { MetaTags } from 'svelte-meta-tags';
-	import { PUBLIC_DOMAIN } from '$env/static/public';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
 
 	interface PanelPrices {
 		tk5: PanelPrice;
@@ -61,5 +61,5 @@
 	title="Sendvič panel cena, krovni paneli cene"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Povoljne cene sendvič panela na našem sajtu. Pružamo vam kvalitetne krovne, zidne i Tesla panele po pristupačnim cenama. Saznajte više na našem sajtu."
-	canonical="https://www.canonical.ie/"
+	canonical="{PUBLIC_SITE_URL}/paneli-cene"
 />

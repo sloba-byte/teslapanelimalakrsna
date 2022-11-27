@@ -20,7 +20,7 @@ const config = {
 			strict: true
 		}),
 		paths: {
-			base: prod ? '/teslapanelimalakrsna' : '',
+			base: prod ? '' : '',
 		}
 	}
 };

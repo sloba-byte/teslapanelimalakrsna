@@ -44,8 +44,8 @@ jobs:
       - name: Create .env file
         shell: bash
         run: |
-          echo PUBLIC_SITE_URL=\"https://sloba-byte.github.io/teslapanelimalakrsna/\" > .env
-          echo PUBLIC_DOMAIN=\"sloba-byte.github.io/teslapanelimalakrsna/\" >> .env
+          echo PUBLIC_SITE_URL=\"www.teslapaneli.rs\" > .env
+          echo PUBLIC_DOMAIN=\"teslapaneli.rs\" >> .env
 
       - name: Fetch panel price data from Google Sheet
         shell: bash

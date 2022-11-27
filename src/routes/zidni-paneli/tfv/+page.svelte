@@ -19,7 +19,7 @@
 			(PIR).
 		</p>
 	</div>
-	<img class="w-3/5" alt="TFV" src="{base}/tfv_panel.webp" width="500px" />
+	<img class="w-3/5" alt="TFV" src="{base}/tfv_panel.webp" />
 </div>
 
 <h2 class="flex mt-4 tracking-tight text-base-content font-medium text-3xl">

@@ -31,3 +31,55 @@ export async function fetchDataFromGSheet(fetch: (input: RequestInfo, init?: Req
     return { header, values };
 }
 
+export async function fetchDataFromTK5GSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
+
+    const res = await fetch(
+        gSheetApiBase + PanelTypes.TK5_Panel + keyParam + gSheetApiKey
+    );
+
+    const result = await res.json()
+
+    const values = result.values as string[][];
+
+    const header = values[0] as string[]
+    //remove header from values
+    values.shift()
+
+    return { header, values };
+}
+
+export async function fetchDataFromTFHGSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
+
+    const res = await fetch(
+        gSheetApiBase + PanelTypes.TFH_Panel + keyParam + gSheetApiKey
+    );
+
+    const result = await res.json()
+
+    const values = result.values as string[][];
+
+    const header = values[0] as string[]
+    //remove header from values
+    values.shift()
+
+    return { header, values };
+}
+
+export async function fetchDataFromTFVGSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
+
+    const res = await fetch(
+        gSheetApiBase + PanelTypes.TFV_Panel + keyParam + gSheetApiKey
+    );
+
+    const result = await res.json()
+
+    const values = result.values as string[][];
+
+    const header = values[0] as string[]
+    //remove header from values
+    values.shift()
+
+    return { header, values };
+}
+
+

@@ -39,6 +39,17 @@
 	>
 </p>
 
+<p class="mt-3 tracking-tight text-base-content text-xl">
+	Pogledajte i ostalu ponudu sendvič panela <a
+		href="{base}/zidni-paneli/tfh"
+		class="underline text-blue-600 hover:text-blue-800">Zidnog Panela TFH</a
+	>
+	kao i
+	<a href="{base}/zidni-paneli/tfv" class="underline text-blue-600 hover:text-blue-800"
+		>Zidnog Panela TFV
+	</a>
+</p>
+
 <MetaTags
 	title="Krovni panel TK5, panel za krov"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"

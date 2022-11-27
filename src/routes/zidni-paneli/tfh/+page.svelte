@@ -39,6 +39,17 @@
 	>
 </p>
 
+<p class="mt-3 tracking-tight text-base-content text-xl">
+	Pogledajte i ostalu ponudu sendvič panela <a
+		href="{base}/zidni-paneli/tfv"
+		class="underline text-blue-600 hover:text-blue-800">Zidnog Panela TFV</a
+	>
+	kao i
+	<a href="{base}/krovni-paneli/tk5" class="underline text-blue-600 hover:text-blue-800"
+		>Krovnog Panela TK5
+	</a>
+</p>
+
 <MetaTags
 	title="Zidni panel TFH brenda Tesla"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"

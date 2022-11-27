@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN } from '$env/static/public';
 
 	interface PanelPrices {
 		tk5: PanelPrice;
@@ -54,3 +56,10 @@
 	Ako vas zanimaju dodatne informacije o cenama sendvič panela, budite slobodni da nas kontaktirate.
 	Vršimo uspešnu prodaju sendvič panela već duži niz godina.
 </p>
+
+<MetaTags
+	title="Sendvič panel cena, krovni paneli cene"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Povoljne cene sendvič panela na našem sajtu. Pružamo vam kvalitetne krovne, zidne i Tesla panele po pristupačnim cenama. Saznajte više na našem sajtu."
+	canonical="https://www.canonical.ie/"
+/>

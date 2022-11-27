@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import { base } from '$app/paths';
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN } from '$env/static/public';
 
 	export let data: PanelPrice;
 </script>
@@ -35,3 +36,10 @@
 		class="btn btn-active btn-primary">Tesla TFV panel</a
 	>
 </p>
+
+<MetaTags
+	title="Zidni panel TFV brenda Tesla"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Zidni panel sa vidljivim zavrtnjem ispunjen poliuretanom i samogasivim poliuretanom. Vrlo kvalitetni i praktični zidni paneli za vaš dom. Kontaktiraje nas."
+	canonical="https://www.canonical.ie/"
+/>

@@ -1,3 +1,8 @@
+<script lang="ts">
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN } from '$env/static/public';
+</script>
+
 <h1 class="text-2xl tracking-tight text-base-content text-center">
 	Mi smo porodičan biznis nastao pre 25 godina!
 </h1>
@@ -16,3 +21,10 @@
 </p>
 
 <p class="mt-2 flex w-full text-2xl tracking-tight text-base-content">Vaš Auto Šop Mala Krsna.</p>
+
+<MetaTags
+	title="O Auto Šopu, Mala Krsna"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Tesla panels - Auto Šop se dugi niz godina bavi uslužnom delatnosću. Pružamo vam kvalitet i brzu uslugu. Kontaktirajte nas za više informacija."
+	canonical="https://www.canonical.ie/"
+/>

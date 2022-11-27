@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN } from '$env/static/public';
 </script>
 
 <h1 class=" text-xl tracking-tight text-base-content text-center">
@@ -63,3 +65,10 @@
 	<input type="text" name="_honey" style="display:none" />
 	<input type="hidden" name="_captcha" value="false" />
 </form>
+
+<MetaTags
+	title="Kontakt telefon i mejl"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Ako vas zanimaju naši sendvič paneli, budite slobodni da nas kontaktirate. Takođe smo tu za vas i da vam pružimo odgovore na sva vaša pitanja."
+	canonical="https://www.canonical.ie/"
+/>

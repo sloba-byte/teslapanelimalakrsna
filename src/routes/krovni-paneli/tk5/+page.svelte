@@ -1,15 +1,18 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import { base } from '$app/paths';
 	import type { PanelPrice } from '$lib/gSheets';
 	import PanelPriceTable from '$lib/PanelPriceTable.svelte';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN } from '$env/static/public';
 
 	export let data: PanelPrice;
 </script>
 
 <div class="flex">
 	<div class="w-2/5 tracking-tight text-base-content">
-		<h1 class="mt-4 font-medium text-3xl">TESLA <strong class="text-red-600">TK5</strong></h1>
+		<h1 class="mt-4 font-medium text-3xl">
+			Tesla paneli za krov - <strong class="text-red-600">TK5</strong>
+		</h1>
 		<div class="mt-6" />
 		<p>
 			Krovni termoizolacioni sendvič panel sa ispunom od poliuretana (PUR) ili samogasivog
@@ -35,3 +38,10 @@
 		class="btn btn-active btn-primary">Tesla TK5 panel</a
 	>
 </p>
+
+<MetaTags
+	title="Krovni panel TK5, panel za krov"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Krovni termoizolacioni panel greje vaš dom i pritom smanjuje mesečne troškove. Veoma kvalitetni i praktični za postavljanje. Pozovite nas za više informacija."
+	canonical="https://www.canonical.ie/"
+/>

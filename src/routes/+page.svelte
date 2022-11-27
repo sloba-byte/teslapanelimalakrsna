@@ -1,5 +1,13 @@
 <script lang="ts">
 	let ids = ['2', '3', '4', '5', '6', '7'];
+	let alts = [
+		'baner reklama tesla paneli',
+		'stovarište tesla sendvic panela',
+		'stovarište sendvic panela tesla',
+		'bager nosi sendvic panele',
+		'stovariste sendvic panela tesla',
+		'slaganje sendvic panela'
+	];
 	import { base } from '$app/paths';
 </script>
 
@@ -12,9 +20,9 @@
 </h2>
 
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
-	{#each ids as id}
+	{#each ids as id, i}
 		<li class="shrink-0">
-			<img alt="Main image - {id}" src="{base}/main-{id}.webp" width="500px" />
+			<img alt={alts[i]} src="{base}/main-{id}.webp" width="500px" />
 		</li>
 	{/each}
 </ul>

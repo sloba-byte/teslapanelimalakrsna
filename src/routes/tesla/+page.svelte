@@ -16,14 +16,18 @@
 
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
 	<li class="shrink-0">
-		<img alt="Fabrika" src="{base}/slika-fabrika.webp" width="500px" />
+		<img alt="fabrika sendvic panela tesla" src="{base}/slika-fabrika.webp" width="500px" />
 	</li>
 	<li class="shrink-0">
-		<img alt="Postrojenje" src="{base}/slika-postrojenje.webp" width="500px" />
+		<img
+			alt="unutrasnjost fabrike sendvic panela"
+			src="{base}/slika-postrojenje.webp"
+			width="500px"
+		/>
 	</li>
 </ul>
 
-<h1 class="mt-2 text-center text-2xl tracking-tight text-base-content text-red-600">Kvalitet</h1>
+<h2 class="mt-2 text-center text-2xl tracking-tight text-base-content text-red-600">Kvalitet</h2>
 
 <div class="mt-2 text-center tracking-tight text-base-content">
 	<p>

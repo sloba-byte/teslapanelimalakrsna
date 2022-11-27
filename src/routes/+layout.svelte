@@ -9,7 +9,7 @@
 			<div class="navbar-start">
 				<a href="{base}/" class="hidden lg:flex">
 					<img
-						alt="Vizit karta"
+						alt="Vizit karta Auto Šopa"
 						src="{base}/vizitka.webp"
 						width="250px"
 						height="150px"
@@ -97,7 +97,7 @@
 					<img
 						height="100px"
 						width="150px"
-						alt="Nasa lokacija"
+						alt="Lokacija Auto Šopa"
 						src="{base}/tesla_paneli_logo.webp"
 					/>
 				</a>

@@ -9,7 +9,9 @@
 
 <div class="flex">
 	<div class="w-2/5 tracking-tight text-base-content">
-		<h1 class="mt-4 font-medium text-3xl">TESLA <strong class="text-red-600">TFV</strong></h1>
+		<h1 class="mt-4 font-medium text-3xl">
+			Tesla paneli za zid - <strong class="text-red-600">TFH</strong>
+		</h1>
 		<div class="mt-6" />
 		<p>
 			Zidni panel sa skrivenim zavrtnjem i ispunom od poliuretana (PUR), ili samogasivog poliuretana

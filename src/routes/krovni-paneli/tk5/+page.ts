@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types';
-import { PanelTypes, fetchDataFromGSheet } from '$lib/gSheets'
+import { TK5_fetchDataFromGSheet } from '$lib/gSheets'
 
-export const load: PageLoad = async ({ fetch, params }) => {
-    return await fetchDataFromGSheet(fetch, PanelTypes.TK5_Panel)
+export const load: PageLoad = async () => {
+    return TK5_fetchDataFromGSheet()
 };

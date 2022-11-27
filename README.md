@@ -1,3 +1,8 @@
+# Google Sheet data fatching
+
+[fetch_gsheet_data.sh](fetch_gsheet_data.sh) bash script is used in action workflow or locally (needs param access key to be passed). API access key is places in private KeyVault on Github.
+For local dev you can change this file even manually if you want to see the change. 2 time a day [gsheet_deploy_pages.yml](.github/workflows/deploy_to_pages.yml) will be kicked off and if there is a change in google sheets new version will get deployed.
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).

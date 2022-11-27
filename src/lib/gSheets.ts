@@ -1,8 +1,11 @@
+import tk5 from '$lib/prefatched/tk5.json'
+import tfh from '$lib/prefatched/tfh.json'
+import tfv from '$lib/prefatched/tfv.json'
 
-export enum PanelTypes {
-    TK5_Panel = "TK5_Panel",
-    TFH_Panel = "TFH_Panel",
-    TFV_Panel = "TFV_Panel",
+interface GoogleSheetApiFormat {
+    range: string;
+    majorDimension: string;
+    values: string[][];
 }
 
 export interface PanelPrice {
@@ -10,19 +13,8 @@ export interface PanelPrice {
     values: string[][]
 }
 
-const gSheetApiBase = "https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/"
-const keyParam = "?key="
-const gSheetApiKey = "AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o"
-
-export async function fetchDataFromGSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>, panel: PanelTypes): Promise<PanelPrice> {
-
-    const res = await fetch(
-        gSheetApiBase + panel + keyParam + gSheetApiKey
-    );
-
-    const result = await res.json()
-
-    const values = result.values as string[][];
+function prepareDataFromGSheet(gSheetData: GoogleSheetApiFormat): PanelPrice {
+    const values = gSheetData.values as string[][];
 
     const header = values[0] as string[]
     //remove header from values
@@ -30,4 +22,17 @@ export async function fetchDataFromGSheet(fetch: (input: RequestInfo, init?: Req
 
     return { header, values };
 }
+
+export function TK5_fetchDataFromGSheet(): PanelPrice {
+    return prepareDataFromGSheet(tk5)
+}
+
+export function TFH_fetchDataFromGSheet(): PanelPrice {
+    return prepareDataFromGSheet(tfh)
+}
+
+export function TFV_fetchDataFromGSheet(): PanelPrice {
+    return prepareDataFromGSheet(tfv)
+}
+
 

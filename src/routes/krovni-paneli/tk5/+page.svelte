@@ -50,6 +50,12 @@
 	</a>
 </p>
 
+<p class="mt-3 tracking-tight text-base-content text-xl">
+	Na <a href="{base}/zidni-paneli/tfh" class="underline text-blue-600 hover:text-blue-800"
+		>Početnoj Strani</a
+	> stoje dodatne informacije o nama i sendvič panelima.
+</p>
+
 <MetaTags
 	title="Krovni panel TK5, panel za krov"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"

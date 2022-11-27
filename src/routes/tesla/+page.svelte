@@ -16,10 +16,10 @@
 
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
 	<li class="shrink-0">
-		<img alt="Fabrika" src="{base}/slika-fabrika.jpg" width="500px" />
+		<img alt="Fabrika" src="{base}/slika-fabrika.webp" width="500px" />
 	</li>
 	<li class="shrink-0">
-		<img alt="Postrojenje" src="{base}/slika-postrojenje.jpg" width="500px" />
+		<img alt="Postrojenje" src="{base}/slika-postrojenje.webp" width="500px" />
 	</li>
 </ul>
 

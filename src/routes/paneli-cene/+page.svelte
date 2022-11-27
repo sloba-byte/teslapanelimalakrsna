@@ -30,10 +30,10 @@
 	sendvič panela i brzu isporuka. Za više informacija možete nas pozvati na:
 </p>
 
-<a class="hover:underline hover:font-semibold" href="tel:0658027827" title="Pozovite nas"
+<a class="underline text-blue-600 hover:text-blue-800" href="tel:0658027827" title="Pozovite nas"
 	>065 80 27 8 27</a
 > <br />
-<a class="hover:underline hover:font-semibold" href="tel:026731168" title="Pozovite nas"
+<a class="underline text-blue-600 hover:text-blue-800" href="tel:026731168" title="Pozovite nas"
 	>026 73 11 68</a
 >
 

@@ -14,7 +14,7 @@
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
 	{#each ids as id}
 		<li class="shrink-0">
-			<img alt="Main image - {id}" src="{base}/main-{id}.jpg" width="500px" />
+			<img alt="Main image - {id}" src="{base}/main-{id}.webp" width="500px" />
 		</li>
 	{/each}
 </ul>

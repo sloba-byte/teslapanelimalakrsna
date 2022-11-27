@@ -10,7 +10,7 @@
 				<a href="{base}/" class="hidden lg:flex">
 					<img
 						alt="Vizit karta"
-						src="{base}/vizitka.png"
+						src="{base}/vizitka.webp"
 						width="250px"
 						height="150px"
 						style="border: 1px solid black"

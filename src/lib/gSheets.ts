@@ -34,7 +34,7 @@ export async function fetchDataFromGSheet(fetch: (input: RequestInfo, init?: Req
 export async function fetchDataFromTK5GSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
 
     const res = await fetch(
-        gSheetApiBase + PanelTypes.TK5_Panel + keyParam + gSheetApiKey
+        "https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/TK5_Panel?key=AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o"
     );
 
     const result = await res.json()
@@ -51,7 +51,7 @@ export async function fetchDataFromTK5GSheet(fetch: (input: RequestInfo, init?: 
 export async function fetchDataFromTFHGSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
 
     const res = await fetch(
-        gSheetApiBase + PanelTypes.TFH_Panel + keyParam + gSheetApiKey
+        "https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/TFH_Panel?key=AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o"
     );
 
     const result = await res.json()
@@ -68,7 +68,7 @@ export async function fetchDataFromTFHGSheet(fetch: (input: RequestInfo, init?: 
 export async function fetchDataFromTFVGSheet(fetch: (input: RequestInfo, init?: RequestInit | undefined) => Promise<Response>): Promise<PanelPrice> {
 
     const res = await fetch(
-        gSheetApiBase + PanelTypes.TFV_Panel + keyParam + gSheetApiKey
+        "https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/TFV_Panel?key=AIzaSyAOEQWWM7bDPWDCeISNqTfduR64vEWK55o"
     );
 
     const result = await res.json()

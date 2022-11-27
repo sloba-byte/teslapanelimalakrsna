@@ -1,12 +1,17 @@
 #!/bin/bash
-gsheet_base_url="https://sheets.googleapis.com/v4/spreadsheets/1m1MZ8M5Klu1JEtz0izLJXnIdBpzYFPBaV0QdMu7ag70/values/"
+if [[ ( $@ == "--help") ||  $@ == "-h" || "$#" -ne 2 ]]
+then 
+	echo "Usage: $0 Needs two arguments, First is google SheetId and Second google sheet API access key"
+	exit 0
+fi 
+
+gsheet_base_url="https://sheets.googleapis.com/v4/spreadsheets/"
+sheet_id_values="${1}/values/"
 tk5="TK5_Panel"
 tfh="TFH_Panel"
 tfv="TFV_Panel"
-access_key="?key=${1}"
+access_key="?key=${2}"
 
-echo $access_key
-
-curl "${gsheet_base_url}${tk5}${access_key}" > ./src/lib/prefatched/tk5.json
-curl "${gsheet_base_url}${tfh}${access_key}" > ./src/lib/prefatched/tfh.json
-curl "${gsheet_base_url}${tfv}${access_key}" > ./src/lib/prefatched/tfv.json
+curl "${gsheet_base_url}${sheet_id_values}${tk5}${access_key}" > ./src/lib/prefatched/tk5.json
+curl "${gsheet_base_url}${sheet_id_values}${tfh}${access_key}" > ./src/lib/prefatched/tfh.json
+curl "${gsheet_base_url}${sheet_id_values}${tfv}${access_key}" > ./src/lib/prefatched/tfv.json

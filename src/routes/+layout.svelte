@@ -106,7 +106,7 @@
 			<div>
 				<span class="footer-title">Lokacija</span>
 				<a
-					class="hover:underline hover:font-semibold"
+					class="underline text-blue-600 hover:text-blue-800 "
 					rel="noreferrer"
 					target="_blank"
 					href="https://goo.gl/maps/TgrMjtdUaP6hFB859"
@@ -116,16 +116,20 @@
 			</div>
 			<div>
 				<span class="footer-title">Telefon</span>
-				<a class="hover:underline hover:font-semibold" href="tel:0658027827" title="Pozovite nas"
-					>065 80 27 8 27</a
+				<a
+					class="underline text-blue-600 hover:text-blue-800"
+					href="tel:0658027827"
+					title="Pozovite nas">065 80 27 8 27</a
 				>
-				<a class="hover:underline hover:font-semibold" href="tel:026731168" title="Pozovite nas"
-					>026 73 11 68</a
+				<a
+					class="underline text-blue-600 hover:text-blue-800"
+					href="tel:026731168"
+					title="Pozovite nas">026 73 11 68</a
 				>
 			</div>
 			<div>
 				<span class="footer-title">E-mail</span>
-				<a class="hover:underline hover:font-semibold" href="mailto:autosopdoo@yahoo.com"
+				<a class="underline text-blue-600 hover:text-blue-800" href="mailto:autosopdoo@yahoo.com"
 					>autosopdoo@yahoo.com</a
 				>
 			</div>

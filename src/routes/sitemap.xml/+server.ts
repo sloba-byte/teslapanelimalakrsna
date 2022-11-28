@@ -3,6 +3,43 @@ import {
     PUBLIC_SITE_URL,
 } from '$env/static/public';
 
+const site_url = PUBLIC_SITE_URL
+
+/*
+
+
+https://teslapaneli.rs/krovni-paneli/tk5
+<priority>0.8 < /priority>
+
+https://teslapaneli.rs/zidni-paneli/tfh
+<priority>0.8 < /priority>
+
+https://teslapaneli.rs/zidni-paneli/tfv
+<priority>0.8 < /priority>
+*/
+
+const zidni_paneli_url: string = PUBLIC_SITE_URL + "/zidni-paneli"
+const krovni_paneli_url = PUBLIC_SITE_URL + "/krovni-paneli"
+const paneli_cene_url = PUBLIC_SITE_URL + "/paneli-cene"
+const tk5_url = PUBLIC_SITE_URL + "/krovni-paneli/tk5"
+const tfh_url = PUBLIC_SITE_URL + "/zidni-paneli/tfh"
+const tfv_url = PUBLIC_SITE_URL + "/zidni-paneli/tfv"
+
+function getPriority(url: string) {
+    switch (url) {
+        case PUBLIC_SITE_URL: return "1.0"
+        case zidni_paneli_url: return "0.9"
+        case krovni_paneli_url: return "0.9"
+        case paneli_cene_url: return "0.9"
+        case tk5_url: return "0.8"
+        case tfh_url: return "0.8"
+        case tfv_url: return "0.8"
+
+        default: return "0.7"
+    }
+}
+
+
 const staticPages = Object.keys(
     import.meta.glob("/src/routes/**/+page.(svelte|md)")
 )
@@ -38,7 +75,7 @@ export const GET = async (): Promise<Response> => {
       <url>
         <loc>${PUBLIC_SITE_URL}</loc>
         <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
+        <priority>1.0</priority>
         <lastmod>${`${process.env.VITE_BUILD_TIME}`}</lastmod>
       </url>
       ${staticPages
@@ -46,7 +83,7 @@ export const GET = async (): Promise<Response> => {
                 (url: string) => `<url>
         <loc>${url}</loc>
         <changefreq>daily</changefreq>
-        <priority>0.7</priority>
+        <priority>${getPriority(url)}</priority>
         <lastmod>${`${process.env.VITE_BUILD_TIME}`}</lastmod>
       </url>`
             )

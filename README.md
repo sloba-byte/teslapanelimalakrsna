@@ -1,3 +1,12 @@
+#SEO stuff
+,
+	define: {
+		'process.env.VITE_BUILD_TIME': JSON.stringify(new Date().toISOString()),
+	},
+	in vite.config so we have this for sitemap.xml
+
+	https://rodneylab.com/sveltekit-faq-page-seo/
+
 # Google Sheet data fatching
 
 [fetch_gsheet_data.sh](fetch_gsheet_data.sh) bash script is used in action workflow or locally (needs param access key to be passed). API access key is places in private KeyVault on Github.

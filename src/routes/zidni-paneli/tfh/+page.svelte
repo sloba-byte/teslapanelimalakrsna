@@ -8,8 +8,8 @@
 	export let data: PanelPrice;
 </script>
 
-<div class="flex">
-	<div class="w-2/5 tracking-tight text-base-content">
+<div class="sm:flex">
+	<div class="sm:w-2/5 tracking-tight text-base-content">
 		<h1 class="mt-4 font-medium text-3xl">
 			Tesla paneli za zid - <strong class="text-red-600">TFH</strong>
 		</h1>
@@ -23,7 +23,7 @@
 			zavrtanj ostaje skriven u spoju panela).
 		</p>
 	</div>
-	<img class="w-3/5" alt="TFH" src="{base}/tfh_panel.webp" />
+	<img class="sm:w-3/5" alt="TFH" src="{base}/tfh_panel.webp" />
 </div>
 
 <h2 class="flex mt-4 font-medium text-3xl">Nasa ponuda panela sa cenama:</h2>

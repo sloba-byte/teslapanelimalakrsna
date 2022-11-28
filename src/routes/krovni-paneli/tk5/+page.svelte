@@ -8,8 +8,8 @@
 	export let data: PanelPrice;
 </script>
 
-<div class="flex">
-	<div class="w-2/5 tracking-tight text-base-content">
+<div class="sm:flex">
+	<div class="sm:w-2/5 tracking-tight text-base-content">
 		<h1 class="mt-4 font-medium text-3xl">
 			Tesla paneli za krov - <strong class="text-red-600">TK5</strong>
 		</h1>
@@ -23,7 +23,7 @@
 			unutrašnjoj strani čime je postignuta visoka nosivost panela.
 		</p>
 	</div>
-	<img class="w-3/5" alt="TK5" src="{base}/tk5_panel.webp" />
+	<img class="sm:w-3/5" alt="TK5" src="{base}/tk5_panel.webp" />
 </div>
 
 <h2 class="flex mt-4 font-medium text-3xl">Nasa ponuda panela sa cenama:</h2>

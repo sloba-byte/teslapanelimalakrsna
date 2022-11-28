@@ -1,5 +1,9 @@
 <script lang="ts">
-	let ids = ['2', '3', '4', '5', '6', '7'];
+	import { base } from '$app/paths';
+	import { MetaTags } from 'svelte-meta-tags';
+	import { PUBLIC_DOMAIN, PUBLIC_SITE_URL } from '$env/static/public';
+
+	let imgIds = ['2', '3', '4', '5', '6', '7'];
 	let alts = [
 		'baner reklama tesla paneli',
 		'stovarište tesla sendvic panela',
@@ -8,7 +12,6 @@
 		'stovariste sendvic panela tesla',
 		'slaganje sendvic panela'
 	];
-	import { base } from '$app/paths';
 </script>
 
 <h1 class="mt-2 text-center text-2xl font-medium tracking-tight text-base-content">
@@ -20,7 +23,7 @@
 </h2>
 
 <ul class="flex w-full snap-x snap-mandatory gap-3 overflow-x-auto pb-3 ">
-	{#each ids as id, i}
+	{#each imgIds as id, i}
 		<li class="shrink-0">
 			<img alt={alts[i]} src="{base}/main-{id}.webp" width="500px" />
 		</li>
@@ -86,3 +89,10 @@
 <p class="mt-2 flex w-full text-xl tracking-tight text-base-content">
 	Dodjite kod nas i uverite se u našu sjajnu uslugu, vrhunski kvalitet i najbolje cene!
 </p>
+
+<MetaTags
+	title="Prodaja sendvic panela, krovni i zidni paneli"
+	titleTemplate="%s | {PUBLIC_DOMAIN}"
+	description="Širok asortiman kvalitetnih i povoljnih sendvič panela za vaše domove. Brza isporuka na željenu adresu. Krovni i zidni paneli. Pozovite nas za više informacija."
+	canonical="{PUBLIC_SITE_URL}/"
+/>

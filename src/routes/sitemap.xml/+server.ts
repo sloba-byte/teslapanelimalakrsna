@@ -13,8 +13,8 @@ const staticPages = Object.keys(
     .map((page) =>
         page
             .replace("/src/routes", PUBLIC_SITE_URL)
-            .replace("/+page.svelte", ".html")
-            .replace("/+page.md", ".html")
+            .replace("/+page.svelte", "")
+            .replace("/+page.md", "")
     );
 
 export const prerender = true;

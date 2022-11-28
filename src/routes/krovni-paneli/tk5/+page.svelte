@@ -51,9 +51,8 @@
 </p>
 
 <p class="mt-3 tracking-tight text-base-content text-xl">
-	Na <a href="{base}/zidni-paneli/tfh" class="underline text-blue-600 hover:text-blue-800"
-		>Početnoj Strani</a
-	> stoje dodatne informacije o nama i sendvič panelima.
+	Na <a href="{base}/" class="underline text-blue-600 hover:text-blue-800">Početnoj Strani</a> stoje
+	dodatne informacije o nama i sendvič panelima.
 </p>
 
 <MetaTags

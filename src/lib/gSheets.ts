@@ -14,11 +14,8 @@ export interface PanelPrice {
 }
 
 function prepareDataFromGSheet(gSheetData: GoogleSheetApiFormat): PanelPrice {
-    const values = gSheetData.values as string[][];
-
-    const header = values[0] as string[]
-    //remove header from values
-    values.shift()
+    const values = gSheetData.values.slice(1) as string[][];
+    const header = gSheetData.values[0] as string[]
 
     return { header, values };
 }

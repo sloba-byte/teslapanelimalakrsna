@@ -6,7 +6,7 @@
 <h1 class="text-2xl tracking-tight text-base-content text-center">Zidni paneli</h1>
 
 <MetaTags
-	title="Krovni paneli, sendvic panel krovni"
+	title="Zidni paneli, paneli za zid"
 	titleTemplate="%s | {PUBLIC_DOMAIN}"
 	description="Prodaja zidnih panela raznih boja, veličina i materijala. Učinite svoj dom efikasnijim i praktičnim uz zidne panele. Pogledajte sve proizvode na našem sajtu."
 	canonical="{PUBLIC_SITE_URL}/zidni-paneli"

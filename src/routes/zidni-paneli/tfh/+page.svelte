@@ -29,7 +29,7 @@
 <h2 class="flex mt-4 font-medium text-3xl">Nasa ponuda panela sa cenama:</h2>
 <PanelPriceTable panelPriceData={data} />
 
-<p class="mt-3 tracking-tight text-base-content text-xl">
+<p class="mt-3 tracking-tight text-base-content text-lg">
 	Više o ovom tipu panela pročitaj na sajtu proizvodjača:
 	<a
 		rel="noreferrer"
@@ -39,7 +39,7 @@
 	>
 </p>
 
-<p class="mt-3 tracking-tight text-base-content text-xl">
+<p class="mt-3 tracking-tight text-base-content text-lg">
 	Pogledajte i ostalu ponudu sendvič panela <a
 		href="{base}/zidni-paneli/tfv"
 		class="underline text-blue-600 hover:text-blue-800">Zidnog Panela TFV</a
@@ -50,7 +50,7 @@
 	</a>
 </p>
 
-<p class="mt-3 tracking-tight text-base-content text-xl">
+<p class="mt-3 tracking-tight text-base-content text-lg">
 	Na <a href="{base}/" class="underline text-blue-600 hover:text-blue-800">Početnoj Strani</a> stoje
 	dodatne informacije o nama i sendvič panelima.
 </p>

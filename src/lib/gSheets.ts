@@ -25,22 +25,18 @@ function prepareDataFromGSheet(gSheetData: GoogleSheetApiFormat): PanelPrice {
     return { header, values };
 }
 
-export function TK5_fetchDataFromGSheet(): PanelPrice {
-    return prepareDataFromGSheet(tk5)
-}
-
-export function TK5_getLowerPrice(): PanelLowestPrice {
+export function getLowestPrice(gSheetData: GoogleSheetApiFormat): PanelLowestPrice {
     let price = "-1"
     let priceNoPDV = "-1"
 
-    if (tk5.values.length < 2) {
+    if (gSheetData.values.length < 2) {
         return { price, priceNoPDV }
     }
 
     let priceNoPDVIndex = -1
     let priceIndex = -1
 
-    const header = tk5.values[0]
+    const header = gSheetData.values[0]
 
     header.forEach((e, i) => {
         if (e.includes("Cena")) {
@@ -53,14 +49,30 @@ export function TK5_getLowerPrice(): PanelLowestPrice {
         }
     });
 
-    if (tk5.values.length > 1 && priceIndex != -1 && priceNoPDVIndex != -1) {
-        price = tk5.values[1][priceIndex]
-        priceNoPDV = tk5.values[1][priceNoPDVIndex]
+    if (priceIndex != -1 && priceNoPDVIndex != -1) {
+        price = gSheetData.values[1][priceIndex]
+        priceNoPDV = gSheetData.values[1][priceNoPDVIndex]
     }
 
     return {
         price, priceNoPDV
     }
+}
+
+export function TK5_getLowestPrice(): PanelLowestPrice {
+    return getLowestPrice(tk5)
+}
+
+export function TFH_getLowestPrice(): PanelLowestPrice {
+    return getLowestPrice(tfh)
+}
+
+export function TFV_getLowestPrice(): PanelLowestPrice {
+    return getLowestPrice(tfv)
+}
+
+export function TK5_fetchDataFromGSheet(): PanelPrice {
+    return prepareDataFromGSheet(tk5)
 }
 
 export function TFH_fetchDataFromGSheet(): PanelPrice {
